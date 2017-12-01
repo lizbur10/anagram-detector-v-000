@@ -6,6 +6,7 @@ class Anagram
   end
 
   def match(word_array)
+    return_array = []
     word_array.each do | word |
       if word.chars.sort == @string.chars.sort
         return_array << word
