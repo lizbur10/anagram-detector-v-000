@@ -5,8 +5,13 @@ class Anagram
     @string = string
   end
 
-  def match
-    
+  def match(word_array)
+    word_array.each do | word |
+      if word.chars.sort == @string.chars.sort
+        return_array << word
+      end
+    end
+    return_array
   end
 
 end
